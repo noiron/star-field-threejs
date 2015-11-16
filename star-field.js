@@ -55,9 +55,7 @@ function makeParticles() {
         // color and custom particle render function we defined
         material = new THREE.ParticleCanvasMaterial( {
             // color: 0xffffff,
-            // color: "0xff0000",
-            // color:    new THREE.Color(getRandomColor()),
-            color:    getRandomColor(),
+            color:   getRandomColor(),
             program: particleRender
         });
         // make the particle
@@ -85,9 +83,8 @@ function makeParticles() {
 function particleRender(context) {
     context.beginPath();
     context.arc(0, 0, 1, 0, 2*Math.PI, true);
-    //context.fillStyle = getRandomColor();
     context.fill();
-};
+}
 
 // moves all the particles dependent on mouse position
 function updateParticles() {
